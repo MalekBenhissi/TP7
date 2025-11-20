@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Livre = require('./models/Livres'); // Fixed import path
+const Livre = require('./models/Livres'); 
 require('./database');
 
 const app = express();
@@ -45,7 +45,7 @@ app.get('/livres', async (req, res) => {
     }
 });
 
-// Mettre à jour un livre - FIXED PATH (lowercase 'l')
+// Mettre à jour un livre 
 app.put('/livres/:id', async (req, res) => {
     try {
         const livre = await Livre.findByIdAndUpdate(req.params.id, req.body, { new: true });
