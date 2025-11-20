@@ -56,7 +56,7 @@ app.put('/livres/:id', async (req, res) => {
     }
 });
 
-// Supprimer un livre - FIXED PATH (lowercase 'l')
+// Supprimer un livre
 app.delete('/livres/:id', async (req, res) => {
     try {
         const livre = await Livre.findByIdAndDelete(req.params.id);
